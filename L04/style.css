@@ -3,6 +3,13 @@ html {
 }
 .Text {color:darkslategrey;
 }
-.absolute {position: absolute}
+.fixed {position: fixed;
+            }
+
+.fixed2{position: fixed;
+right: 500px}
+
+.fixed3{position:fixed;
+right: 1000px}
 
 
