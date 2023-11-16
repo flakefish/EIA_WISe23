@@ -1,15 +1,42 @@
 html {
     background-color:aquamarine;
 }
-.Text {color:darkslategrey;
+.Text {color:rgb(88, 151, 151);
 }
-.fixed {position: fixed;
-            }
 
-.fixed2{position: fixed;
-right: 500px}
+#intro1 {
+    position: fixed;
+}
 
-.fixed3{position:fixed;
-right: 1000px}
+#intro2 {
+    position: fixed;
+}
 
+#intro3 {
+    position: fixed;
+}
+
+#middle1{
+    position: fixed;
+}
+
+#middle2{
+    position: fixed;
+}
+
+#middle3{
+    position: fixed;
+}
+
+#outro1{
+    position: fixed;
+}
+
+#outro2{
+    position: fixed;
+}
+
+#outro3{
+    position: fixed;
+}
 
