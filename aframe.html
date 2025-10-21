@@ -5,13 +5,18 @@
     <title>360&deg; Image</title>
     <meta name="description" content="360&deg; Image - A-Frame">
     <script src="/aframe-master.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@5.x.x/dist/aframe-event-set-component.min.js"></script>
   </head>
   <body>
     <a-scene>
+    
       <a-sky src="budenzauber-on-the-weihnachtsmarkt-PMX9H8.jpg" rotation="0 -130 0"></a-sky>
-
+      <a-camera>
+        <a-cursor> </a-cursor>
+      </a-camera>
       <a-text font="kelsonsans" value="Weihnachtsmarkt" width="6" position="-2.5 0.25 -1.5"
               rotation="0 15 0"></a-text>
     </a-scene>
+
   </body>
-</html
+</html>
