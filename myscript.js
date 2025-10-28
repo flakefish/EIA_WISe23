@@ -10,3 +10,4 @@ image.setAttribute('animation', "property: position; from:" + randomX + " " + ra
 image.setAttribute('src', '/22-snowflake-png-image.png');
 document.getElementById('1').appendChild(image);
 };
+
