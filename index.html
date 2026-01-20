@@ -3,19 +3,21 @@
   <head>
   <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    <script src="myscript.js" defer></script>
+    <script src="myscript.js" defer ></script>
   </head>
 
   <body style="margin: 0; overflow: hidden">
-    <a-scene embedded arjs>
-      
-      <!-- Marker -->
-      <a-marker preset="hiro" id="hiroMarker"></a-marker>
-
-      <!-- Schnee wird NICHT in den Marker gepackt -->
-      <a-entity id="snowContainer"></a-entity>
-
-      <a-entity camera></a-entity>
+    <a-scene>
+      <a-assets>
+    <a-asset-item id="Raum" src="RaumFuerCodingobj.obj"></a-asset-item>
+    <a-asset-item id="raumMtl" src="RaumFuerCodingobj.mtl"></a-asset-item>
+  </a-assets>
+   <a-entity obj-model="obj: #Raum; mtl: #raumMtl" modify-materials></a-entity>
+      <a-cursor fuse="false"></a-cursor>
+      <a-plane src="pexels-codioful-6985193.jpg" position="0 1.6 -1.1" width="0.55" height="0.55"></a-plane>
+      <a-plane id="snowflake" segments-width="64" segments-height="64" position="0 1.6 -1" width="0.5" height="0.5" cursor-listener></a-plane>
+      <a-plane id="info-text" position="0.45 1.6 -1" width="0.35" height="0.15"></a-plane>
     </a-scene>
   </body>
 </html>
+
