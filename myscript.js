@@ -35,7 +35,7 @@ AFRAME.registerComponent('modify-materials', {
             textureLoader.load('wood-1853403_1920.jpg', (texture) => {
               texture.wrapS = THREE.RepeatWrapping;
               texture.wrapT = THREE.RepeatWrapping;
-              texture.repeat.set(2, 2); // Passe die Werte ggf. an
+              texture.repeat.set(2, 2); 
               node.material.map = texture;
               node.material.needsUpdate = true;
             });
@@ -120,10 +120,10 @@ if (snowflake) {
       // Speichere das aktuell angestrahlte Segment
       let currentSegmentIndex = null;
 
-      // Shutter-Soundeffekt (ohne Überlagerung)
+      // Soundeffekt 
       const shutterSound = new Audio('Sound.mp3');
       shutterSound.volume = 0.5;
-      shutterSound.playbackRate = 4.0; // Doppelte Geschwindigkeit
+      shutterSound.playbackRate = 4.0;
       let soundPlaying = false;
       shutterSound.addEventListener('ended', () => { soundPlaying = false; });
       
@@ -277,7 +277,7 @@ if (snowflake) {
           // Positioniere den Indikator-Kreis auf der Plane (lokale Koordinaten)
           const localX = (u - 0.5) * planeWidth;
           const localY = (0.5 - v) * planeHeight;
-          indicatorGroup.position.set(localX, localY, 0.001); // Leicht über der Plane
+          indicatorGroup.position.set(localX, localY, 0.001); 
           indicator.visible = true;
           outline.visible = true;
 
@@ -287,8 +287,8 @@ if (snowflake) {
           }
         } else {
           currentSegmentIndex = null;
-          indicator.visible = false; // Verstecke Indikator wenn außerhalb der Plane
-          outline.visible = false; // Verstecke Umrandung wenn außerhalb der Plane
+          indicator.visible = false;
+          outline.visible = false;
         }
       });
 
@@ -302,11 +302,10 @@ if (snowflake) {
         }
       });
 
-      // Klick-Handler hinzufügen (ersetzt durch Tasten-Event)
+      // Test-Feature, es werden alle Segmente unsichtbar
       document.addEventListener('keydown', (event) => {
         if (event.key === 'i') {
           console.log('Key "i" pressed');
-          // Setze alle Materialien auf unsichtbar
           mesh.material.forEach((mat) => {
             mat.opacity = 0;
           });
@@ -318,7 +317,6 @@ if (snowflake) {
       document.addEventListener('keydown', (event) => {
         if (event.key === 'r') {
           console.log('Key "r" pressed');
-          // Resette das Bild auf komplett sichtbar 
           mesh.material.forEach((mat) => {
             mat.opacity = 1;
           });
